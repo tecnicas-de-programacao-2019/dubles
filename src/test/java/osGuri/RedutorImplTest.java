@@ -1,32 +1,3 @@
-
-public class FormatadorImplTest {
-    @Test
-    @DisplayName("Testa se o metodo formata uma string valida")
-    public void testaFormatacaoValida() {
-        FormatadorImpl formatador = new FormatadorImpl();
-        String result = formatador.formataPalavra("HelloWorld");
-        assertEquals("HELLOWORLD", result);
-    }
-
-    @Test
-    @DisplayName("Testa se o metodo formata uma string invalida")
-    public void testaFormatacaoInValida() {
-        FormatadorImpl formatador = new FormatadorImpl();
-        assertThrows(IllegalArgumentException.class, () -> {
-            formatador.formataPalavra("H]ello World");
-        });
-
-        assertThrows(IllegalArgumentException.class, () -> {
-            formatador.formataPalavra("");
-        });
-    }
-
-
-}
-
-
-
-
 package osGuri;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -35,54 +6,68 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
-import java.util.regex.Pattern;
 
-
-public class RedutorImplTest{
-    public RedutorImpl(){
-
-    }
+public class RedutorImplTest {
     @Test
-    @DisplayName("Testa se o metodo formata uma string valida")
-    // Decodifica um caracter segundo a tabela Pitagorica
-    public int tabPitagorica(char c){
-
+    @DisplayName("Testa se o metodo reduz uma string valida")
+    public void testaReducaoPalavra() {
+        RedutorImpl redutor = new RedutorImpl();
+        String result = redutor.reducaoPalavra("Hello");
+        assertEquals("85336", result);
     }
 
-    // Decodifica um caracter segundo a tabela Chaldean
-    public int tabChaldean(char c){
+    @Test
+    @DisplayName("Testa se o metodo reduz uma string invalida")
+    public void testaReducaoPalavraInValida() {
+        RedutorImpl redutor = new RedutorImpl();
+        assertThrows(IllegalArgumentException.class, () -> {
+            redutor.reducaoPalavra("H]ello");
+        });
 
+        assertThrows(IllegalArgumentException.class, () -> {
+            redutor.reducaoPalavra("");
+        });
     }
 
-    // Decodifica um caracter segundo a tabela selecionada
-    public int decodChar(char c){
-
+    @Test
+    @DisplayName("Testa se o metodo reduz uma frase valida")
+    public void testaReducaoFrase() {
+        RedutorImpl redutor = new RedutorImpl();
+        String result = redutor.ReducaoFrase("Hello ABC");
+        assertEquals("85336123", result);
     }
 
-    public String reducaoSimples(String str){
+    @Test
+    @DisplayName("Testa se o metodo reduz uma frase invalida")
+    public void testaReducaoFraseInValida() {
+        RedutorImpl redutor = new RedutorImpl();
+        assertThrows(IllegalArgumentException.class, () -> {
+            redutor.reducaoFrase("H]ello ABC");
+        });
 
+        assertThrows(IllegalArgumentException.class, () -> {
+            redutor.reducaoFrase("");
+        });
     }
 
-
-    @Override
-	public void setTipoTabela(TipoTabela tipo){
-
+    @DisplayName("Testa se o metodo reduz uma data valida")
+    public void testaReducaoData() {
+        RedutorImpl redutor = new RedutorImpl();
+        String result = redutor.reducaoData("22/06/1989");
+        assertEquals("22061989", result);
     }
 
+    @Test
+    @DisplayName("Testa se o metodo reduz uma data invalida")
+    public void testaReducaoDataInValida() {
+        RedutorImpl redutor = new RedutorImpl();
+        assertThrows(IllegalArgumentException.class, () -> {
+            redutor.reducaoData("22]06]1989");
+        });
 
-    @Override
-	public int reducaoPalavra(String palavra){
-
+        assertThrows(IllegalArgumentException.class, () -> {
+            redutor.reducaoData("");
+        });
     }
 
-
-    @Override
-	public int reducaoFrase(String frase){
-
-    }
-
-
-    @Override
-	public int reducaoData(String data){
-    }
 }
