@@ -12,7 +12,7 @@ public class RedutorImplTest {
     @DisplayName("Testa se o metodo reduz uma string valida")
     public void testaReducaoPalavra() {
         RedutorImpl redutor = new RedutorImpl();
-        String result = redutor.reducaoPalavra("Hello");
+        int result = redutor.reducaoPalavra("Hello");
         assertEquals("85336", result);
     }
 
@@ -33,7 +33,7 @@ public class RedutorImplTest {
     @DisplayName("Testa se o metodo reduz uma frase valida")
     public void testaReducaoFrase() {
         RedutorImpl redutor = new RedutorImpl();
-        String result = redutor.ReducaoFrase("Hello ABC");
+        int result = redutor.reducaoFrase("Hello ABC");
         assertEquals("85336123", result);
     }
 
@@ -53,7 +53,7 @@ public class RedutorImplTest {
     @DisplayName("Testa se o metodo reduz uma data valida")
     public void testaReducaoData() {
         RedutorImpl redutor = new RedutorImpl();
-        String result = redutor.reducaoData("22/06/1989");
+        int result = redutor.reducaoData("22/06/1989");
         assertEquals("22061989", result);
     }
 
