@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: osGuri.RedutorImplTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 2, Skipped: 0, Time elapsed: 0.02 s <<< FAILURE! - in osGuri.RedutorImplTest
+testaReducaoPalavra  Time elapsed: 0.007 s  <<< ERROR!
+java.lang.IllegalArgumentException: Caracter: e
+	at osGuri.RedutorImplTest.testaReducaoPalavra(RedutorImplTest.java:15)
+
+testaReducaoFraseInValida  Time elapsed: 0.003 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+	at osGuri.RedutorImplTest.testaReducaoFraseInValida(RedutorImplTest.java:48)
+
+testaReducaoFrase  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalArgumentException: Caracter: e
+	at osGuri.RedutorImplTest.testaReducaoFrase(RedutorImplTest.java:36)
+
+testaReducaoPalavraInValida  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+	at osGuri.RedutorImplTest.testaReducaoPalavraInValida(RedutorImplTest.java:27)
+

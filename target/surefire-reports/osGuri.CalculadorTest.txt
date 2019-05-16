@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: osGuri.CalculadorTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.231 s <<< FAILURE! - in osGuri.CalculadorTest
+calculaNumeroDestino  Time elapsed: 0.229 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0> but was: <1>
+	at osGuri.CalculadorTest.calculaNumeroDestino(CalculadorTest.java:38)
+
