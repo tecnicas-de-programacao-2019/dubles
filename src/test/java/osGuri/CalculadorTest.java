@@ -12,7 +12,7 @@ import org.mockito.*;
 
 public class CalculadorTest{
     @Test
-    @DisplayName("Testa se o metodo calcula um numero de vida valido")
+    @DisplayName("Testa se o metodo calcula  um numero de vida valido")
     public void testaCalculaNumeroDaVida() {
         FormatadorImpl mockFormatador = mock(FormatadorImpl.class);
         RedutorImpl mockRedutor = mock(RedutorImpl.class);
